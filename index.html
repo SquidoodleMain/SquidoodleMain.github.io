@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
-
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="dist/reset.css" />
-		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
-
-		<script src="dist/reveal.js"></script>
-		<script src="dist/plugin/notes.js"></script>
-		<script src="dist/plugin/markdown.js"></script>
-		<script src="dist/plugin/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
-		</script>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Hermann</title>
+  <style>
+    :root {
+      --bg: #0a0f0d;
+      --bg2: #111917;
+      --text: #edf8f0;
+      --muted: #9ac7a2;
+      --accent: #7dff95;
+      --border: rgba(125,255,149,0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Inter, system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(125,255,149,0.08), transparent 30%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+      color: var(--text);
+    }
+    .card {
+      width: min(680px, calc(100vw - 32px));
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(10,16,13,0.78);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      line-height: 0.95;
+    }
+    p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      max-width: 55ch;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      color: #08100a;
+      background: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow">Hello</div>
+    <h1>Hi, I’m Daniel.</h1>
+    <p>Welcome to my small corner of the internet. If you want a quick introduction, open the presentation below.</p>
+    <a href="./aboutMe-EN.slides.html">Open aboutMe-EN.slides.html →</a>
+  </main>
+</body>
 </html>
